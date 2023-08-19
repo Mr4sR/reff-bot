@@ -77,7 +77,7 @@ for _ in range(int(num_requests)):
                 'email': data_email,
             }
         )
-        emailinfo = validate_email(data_email, check_deliverability=False)
+        emailinfo = validate_email(data_email, check_deliverability=True)
     except EmailNotValidError as e:
         input(str(e) + ' [Press any Keys to Exit]')
         break
